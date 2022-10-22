@@ -151,7 +151,7 @@ export const validCSSColorNames = [
 
 export function isValidHSL(hslString: string): boolean {
   if (typeof hslString !== 'string')
-    throw new Error(`'hslString' must be a string`)
+    throw new Error('\'hslString\' must be a string')
 
   const csvLength = hslString
     .replace(/((hsla)|(hsl))|\(|\)|\s/g, '')
@@ -196,7 +196,7 @@ export function isValidHSL(hslString: string): boolean {
 
 export function isValidColorName(colorName: string): boolean {
   if (typeof colorName !== 'string')
-    throw new Error(`'colorName' must be a string`)
+    throw new Error('\'colorName\' must be a string')
   if (!colorName) return false
   return validCSSColorNames.includes(colorName.toLowerCase())
 }
@@ -220,7 +220,12 @@ export function validateHexRGB(rgbString: string): boolean {
   // Convert the hex color string to uppercase and remove the hash symbol
   rgbString = rgbString.toUpperCase().slice(1)
 
-  if (rgbString.length !== 6 && rgbString.length !== 3 && rgbString.length !== 8) return false
+  if (
+    rgbString.length !== 6 &&
+    rgbString.length !== 3 &&
+    rgbString.length !== 8
+  )
+    return false
   const areAllValuesValidHex = [...rgbString].every(
     s => s.search(/[0-9A-F]/g) !== -1
   )
@@ -238,9 +243,9 @@ export function validateFunctionalRGB(rgbString: string): boolean {
 
   const isAlpha = rgbString.startsWith('rgba(')
 
-  if (isAlpha && csvLength !== 4 || !isAlpha && csvLength !== 3)
+  if ((isAlpha && csvLength !== 4) || (!isAlpha && csvLength !== 3))
     return false
- 
+
   const parsedRGBA = parseRGB(rgbString)
   const red = parseFloat(parsedRGBA.red)
   const green = parseFloat(parsedRGBA.green)
@@ -299,7 +304,7 @@ export type Color = string | HSLAColor | RGBAColor
 
 export function isValidRGB(rgbString: string): boolean {
   if (typeof rgbString !== 'string')
-    throw new Error(`'rgbString' must be a string`)
+    throw new Error('\'rgbString\' must be a string')
   if (rgbString.startsWith('#')) return validateHexRGB(rgbString)
   else return validateFunctionalRGB(rgbString)
 }
