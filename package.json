@@ -9,8 +9,10 @@
   ],
   "scripts": {
     "build": "tsc",
-    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
+    "format": "prettier --ignore-path .gitignore \"**/*.+(js|ts|json)\"",
+    "format:fix": "prettier --ignore-path .gitignore \"**/*.+(js|ts|json)\" --write",
     "lint": "eslint --fix --ignore-path .eslintignore --ext .js,.ts .",
+    "lint:fix": "eslint --fix --ignore-path .eslintignore --ext .js,.ts --fix .",
     "test": "uvu -r tsm tests"
   },
   "repository": {
