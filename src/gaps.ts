@@ -15,13 +15,19 @@ export const Gaps = {
   '4xl': 'var(--gap-4xl)',
 }
 
-export type Gap = keyof typeof Gaps | CSSLength | number
+export type GapSize = keyof typeof Gaps
+
+export type Gap = GapSize | CSSLength | number
 
 export function parseGap(gap: Gap | unknown): CSSLength | undefined {
   if (typeof gap === 'number') return `${gap}px`
 
   if (typeof gap === 'string') {
-    return gap in Gaps ? Gaps[gap] : isCssLength(gap) ? gap : '0px'
+    return gap in Gaps
+      ? (Gaps[gap as GapSize] as CSSLength)
+      : isCssLength(gap)
+        ? gap
+        : '0px'
   }
 
   return '0px'

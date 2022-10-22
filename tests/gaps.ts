@@ -1,6 +1,6 @@
 import { test } from 'uvu'
 import * as assert from 'uvu/assert'
-import { parseGap } from '../../src/utils/gaps.js'
+import { parseGap } from '../src/gaps.js'
 
 test('parseGap', () => {
   assert.type(parseGap, 'function', 'parseGap is a function')

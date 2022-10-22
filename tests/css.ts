@@ -1,6 +1,6 @@
 import { suite } from 'uvu'
 import * as assert from 'uvu/assert'
-import * as css from '../../src/utils/css.js'
+import * as css from '../src/css.js'
 
 const CSS = suite('css')
 

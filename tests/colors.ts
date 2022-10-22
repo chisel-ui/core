@@ -1,6 +1,6 @@
 import { suite } from 'uvu'
 import * as assert from 'uvu/assert'
-import * as colors from '../../src/utils/colors.js'
+import * as colors from '../src/colors.js'
 
 const Colors = suite('colors')
 

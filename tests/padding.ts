@@ -1,6 +1,6 @@
 import { suite } from 'uvu'
 import * as assert from 'uvu/assert'
-import * as padding from '../../src/utils/padding.js'
+import * as padding from '../src/padding.js'
 
 const Padding = suite('padding')
 
