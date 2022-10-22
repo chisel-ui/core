@@ -1,0 +1,45 @@
+{
+  "name": "@chisel-ui/core",
+  "version": "1.0.0",
+  "description": "A collection of utilities used as building blocks for @chisel-ui layout primitives.",
+  "type": "module",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
+    "lint": "eslint --ignore-path .eslintignore --ext .js,.ts .",
+    "test": "uvu -r tsm tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chisel-ui/core.git"
+  },
+  "keywords": [
+    "layout",
+    "primitives",
+    "reset"
+  ],
+  "author": {
+    "name": "Tony Sullivan",
+    "email": "tony.f.sullivan@outlook.com",
+    "url": "https://tonysull.co"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chisel-ui/core/issues"
+  },
+  "homepage": "https://chisel-ui.dev",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.40.1",
+    "@typescript-eslint/parser": "^5.40.1",
+    "eslint": "^8.26.0",
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "^2.7.1",
+    "tsm": "^2.2.2",
+    "typescript": "^4.8.4",
+    "uvu": "^0.5.6"
+  }
+}
