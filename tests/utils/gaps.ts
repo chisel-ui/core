@@ -20,7 +20,7 @@ test('parseGap', () => {
     ['xl', 'var(--gap-xl)', 'xl gap variable'],
     ['2xl', 'var(--gap-2xl)', '2xl gap variable'],
     ['3xl', 'var(--gap-3xl)', '3xl gap variable'],
-    ['4xl', 'var(--gap-4xl)', '4xl gap variable']
+    ['4xl', 'var(--gap-4xl)', '4xl gap variable'],
   ]
 
   for (const [value, expected, message] of cases) {
