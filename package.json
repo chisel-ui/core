@@ -4,6 +4,7 @@
   "description": "A collection of utilities used as building blocks for @chisel-ui layout primitives.",
   "type": "module",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "exports": {
     "default": "./dist/index.js",
     "css/*": "./css/*"
