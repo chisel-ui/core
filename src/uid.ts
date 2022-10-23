@@ -1,5 +1,5 @@
 let id = 1
 
-export default function uid() {
+export function uid() {
   return `chisel-${id++}`
 }
