@@ -25,4 +25,13 @@ test('joinStyles', () => {
     'color: red;background: blue;font-size: 16px;line-height: 1.5;font-weight: bold',
     'three complex styles'
   )
+  assert.is(
+    joinStyles(
+      'color: red',
+      undefined,
+      'background: blue'
+    ),
+    'color: red;background: blue',
+    'ignores undefined values'
+  )
 })
