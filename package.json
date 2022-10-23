@@ -6,8 +6,8 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {
-    "default": "./dist/index.js",
-    "css/*": "./css/*"
+    ".": "./dist/index.js",
+    "./css/*": "./css/*"
   },
   "files": [
     "css",
