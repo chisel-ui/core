@@ -16,3 +16,7 @@
 <a align="center" href="https://github.com/chisel-ui/core"><img width="100%" src="/assets/banner.svg" alt="Chisel - A collection of utilities used as building blocks for @chisel-ui layout primitives."></a>
 
 > ⚠️ This is still experimental!
+
+# @chisel-ui/core
+
+Docs coming soon: [chisel-ui.dev](https://chisel-ui.dev)
