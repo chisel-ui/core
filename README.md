@@ -15,7 +15,7 @@
 
 <a align="center" href="https://github.com/chisel-ui/core"><img width="100%" src="/assets/banner.svg" alt="Chisel - A collection of utilities used as building blocks for @chisel-ui layout primitives."></a>
 
-> ⚠️ This is still experimental!
+> ⚠️ This is still experimental! Looking for a production-ready collection of layout primitives? [Bedrock Layout](https://www.bedrock-layout.dev/)
 
 # @chisel-ui/core
 
