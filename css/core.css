@@ -4,9 +4,9 @@
     --gap-3xs: calc(var(--gap-2xs) / var(--gap-ratio));
     --gap-2xs: calc(var(--gap-xs) / var(--gap-ratio));
     --gap-xs: calc(var(--gap-sm) / var(--gap-ratio));
-    --gap-sm: calc(var(--gap-base) / var(--gap-ratio));
+    --gap-sm: calc(var(--gap-md) / var(--gap-ratio));
     --gap-md: 16px;
-    --gap-lg: calc(var(--gap-base) * var(--gap-ratio));
+    --gap-lg: calc(var(--gap-md) * var(--gap-ratio));
     --gap-xl: calc(var(--gap-lg) * var(--gap-ratio));
     --gap-2xl: calc(var(--gap-xl) * var(--gap-ratio));
     --gap-3xl: calc(var(--gap-2xl) * var(--gap-ratio));
