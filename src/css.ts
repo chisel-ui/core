@@ -60,7 +60,9 @@ export function isCssLength(string_: string): string_ is CSSLength {
   ].some(regex => regex.test(string_))
 }
 
-export function parseCssLength(value: string | number): CSSLength | undefined {
+export function parseCssLength(value: string | number | undefined | null): CSSLength | undefined {
+  if (!value) { return undefined }
+
   return typeof value === 'number'
     ? value >= 0
       ? `${value}px`
