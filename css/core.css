@@ -1,14 +1,46 @@
 :where(:root) {
-    --gap-ratio: 1.5;
-    --gap-4xs: calc(var(--gap-3xs) / var(--gap-ratio));
-    --gap-3xs: calc(var(--gap-2xs) / var(--gap-ratio));
-    --gap-2xs: calc(var(--gap-xs) / var(--gap-ratio));
-    --gap-xs: calc(var(--gap-sm) / var(--gap-ratio));
-    --gap-sm: calc(var(--gap-md) / var(--gap-ratio));
-    --gap-md: 16px;
-    --gap-lg: calc(var(--gap-md) * var(--gap-ratio));
-    --gap-xl: calc(var(--gap-lg) * var(--gap-ratio));
-    --gap-2xl: calc(var(--gap-xl) * var(--gap-ratio));
-    --gap-3xl: calc(var(--gap-2xl) * var(--gap-ratio));
-    --gap-4xl: calc(var(--gap-3xl) * var(--gap-ratio));
+    --measure: 60ch;
+    --ratio: 1.25; /* Major Third */
+
+    --gap-4xs: calc(var(--gap-3xs) / var(--ratio));
+    --gap-3xs: calc(var(--gap-2xs) / var(--ratio));
+    --gap-2xs: calc(var(--gap-xs) / var(--ratio));
+    --gap-xs: calc(var(--gap-sm) / var(--ratio));
+    --gap-sm: calc(var(--gap-md) / var(--ratio));
+    --gap-md: 1rem;
+    --gap-lg: calc(var(--gap-md) * var(--ratio));
+    --gap-xl: calc(var(--gap-lg) * var(--ratio));
+    --gap-2xl: calc(var(--gap-xl) * var(--ratio));
+    --gap-3xl: calc(var(--gap-2xl) * var(--ratio));
+    --gap-4xl: calc(var(--gap-3xl) * var(--ratio));
+
+    --leading-sm: calc(var(--leading-md) / var(--ratio)); 
+    --leading-md: 1.5;
+    --leading-lg: calc(var(--leading-md) * var(--ratio));
+
+    --text-xs: calc(var(--text-sm) / var(--ratio));
+    --text-sm: calc(1rem / var(--ratio));
+    --text-md: calc(1rem * var(--ratio));
+    --text-lg: calc(var(--text-md) * var(--ratio));
+    --text-xl: calc(var(--text-lg) * var(--ratio));
+    --text-2xl: calc(var(--text-xl) * var(--ratio));
+    --text-3xl: calc(var(--text-2xl) * var(--ratio));
+    --text-4xl: calc(var(--text-3xl) * var(--ratio));
+
+    line-height: var(--leading-md);
+}
+
+:where(*, :after, :before) {
+    box-sizing: border-box;
+    background-color: inherit;
+    font-family: inherit;
+    overflow-wrap: break-word;
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
+    max-inline-size: var(--measure);
+}
+
+:where(html, body, div, header, nav, main, footer) {
+    max-inline-size: unset;
 }
