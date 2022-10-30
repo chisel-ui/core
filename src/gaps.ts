@@ -19,7 +19,7 @@ export type GapSize = keyof typeof Gaps
 
 export type Gap = GapSize | CSSLength | number
 
-export function parseGap(gap: Gap | unknown): CSSLength | undefined {
+export function parseGap(gap: Gap | unknown): CSSLength {
   if (typeof gap === 'number') return `${gap}px`
 
   if (typeof gap === 'string') {

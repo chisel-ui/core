@@ -2,6 +2,10 @@
     --measure: 60ch;
     --ratio: 1.25; /* Major Third */
 
+    --border-sm: .125rem;
+    --border-md: calc(var(--border-sm) * var(--ratio) * var(--ratio));
+    --border-lg: calc(var(--border-md) * var(--ratio) * var(--ratio));
+
     --gap-4xs: calc(var(--gap-3xs) / var(--ratio));
     --gap-3xs: calc(var(--gap-2xs) / var(--ratio));
     --gap-2xs: calc(var(--gap-xs) / var(--ratio));
